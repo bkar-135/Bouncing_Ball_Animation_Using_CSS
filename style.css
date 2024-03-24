@@ -1,0 +1,133 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  background-color: rgb(108, 179, 240);
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.ball {
+  background-color: rgb(255, 87, 87);
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: none;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  animation: BouncingBall 1.5s infinite;
+}
+
+.ground {
+  background-color: rgb(0, 28, 53, 0.1);
+  width: 50px;
+  height: 2.5px;
+  border-radius: 50%;
+  position: absolute;
+  top: 335px;
+  left: 256px;
+  animation: shadow 1.5s infinite;
+}
+
+@keyframes BouncingBall {
+  0% {
+    width: 50px;
+    height: 50px;
+  }
+  30% {
+    width: 45px;
+    height: 55px;
+  }
+  50% {
+    width: 70px;
+    height: 44px;
+    transform: translateY(240px);
+  }
+  /*75% {
+    top: 25%;
+    left: 51vw;
+    width: 3vw;
+    height: 15vh;
+    border-radius: 50%;
+  }*/
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+@keyframes shadow {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .container {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .ball {
+    background-color: rgb(255, 87, 87);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: none;
+    position: absolute;
+    top: 30px;
+    left: 43%;
+  }
+  .ground {
+    background-color: rgb(0, 28, 53, 0.1);
+    width: 50px;
+    height: 2.5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 275px;
+    left: 45%;
+  }
+  @keyframes BouncingBall {
+    0% {
+      width: 50px;
+      height: 50px;
+    }
+    30% {
+      width: 45px;
+      height: 55px;
+    }
+    50% {
+      width: 70px;
+      height: 44px;
+      transform: translateY(200px);
+    }
+    /*75% {
+      top: 25%;
+      left: 51vw;
+      width: 3vw;
+      height: 15vh;
+      border-radius: 50%;
+    }*/
+    100% {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
