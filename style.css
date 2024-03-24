@@ -22,7 +22,7 @@ body {
   position: absolute;
   top: 50px;
   left: 50%;
-  animation: BouncingBall 1.5s infinite;
+  animation: BouncingBall 1s infinite;
 }
 
 .ground {
@@ -33,7 +33,7 @@ body {
   position: absolute;
   top: 335px;
   left: 256px;
-  animation: shadow 1.5s infinite;
+  animation: shadow 1s infinite;
 }
 
 @keyframes BouncingBall {
